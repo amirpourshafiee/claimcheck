@@ -88,6 +88,7 @@ def validate_sheet(
     split_of = {t["answer_id"]: t["split"] for t in topics}
     source_ids = sorted({s["source_id"] for t in topics for s in t["sources"]})
     problems: list[str] = []
+    warnings: list[str] = []  # worth knowing, but they do not affect any metric
     seen: set[str] = set()
     labels: Counter = Counter()
     for i, r in enumerate(rows, start=2):  # row 1 is the header
@@ -98,7 +99,7 @@ def validate_sheet(
         if r.get("answer_id") not in split_of:
             problems.append(f"{where}: unknown answer_id {r.get('answer_id')!r}")
         elif r.get("split") != split_of[r["answer_id"]]:
-            problems.append(f"{where}: split {r.get('split')!r} != topics file")
+            problems.append(f"{where}: split {r.get('split')!r} != topics file (run fix-splits)")
         if r.get("origin") not in ORIGINS:
             problems.append(f"{where}: origin must be one of {sorted(ORIGINS)}")
         if r.get("origin") == "planted" and r.get("planted_type") not in PLANTED_TYPES:
@@ -123,7 +124,7 @@ def validate_sheet(
                 f"{where}: cites {r['citation_id']!r} (no such source) but is not CITATION_MISSING"
             )
         if len((r.get("evidence_quote") or "").split()) > MAX_QUOTE_WORDS:
-            problems.append(f"{where}: evidence_quote longer than {MAX_QUOTE_WORDS} words")
+            warnings.append(f"{where}: evidence_quote longer than {MAX_QUOTE_WORDS} words")
     organic = [r for r in rows if r.get("origin") == "organic"]
     by_citation = Counter(r.get("citation_id") for r in organic)
     for sid in source_ids:
@@ -136,12 +137,39 @@ def validate_sheet(
     stats = {
         "rows": len(rows),
         "by_citation_organic": dict(by_citation),
+        "warnings": warnings,
         "by_label": dict(labels),
         "by_split": dict(Counter(r.get("split") for r in rows)),
         "by_origin": dict(Counter(r.get("origin") for r in rows)),
         "unsure": sum("UNSURE" in (r.get("notes") or "").upper() for r in rows),
     }
     return problems, stats
+
+
+def fix_splits(sheet_path: Path, topics_path: Path) -> list[tuple[str, str, str]]:
+    """Rewrite each row's split from topics.json. Returns (claim_id, old, new) for every change.
+
+    The rule is fixed by the labeling guide: a row, planted or organic, inherits the split of its
+    answer. Only the split column is touched. The write is atomic (temp file, then rename).
+    """
+    split_of = {t["answer_id"]: t["split"] for t in load_topics(topics_path)}
+    rows = _read_csv(sheet_path)
+    changes = []
+    for r in rows:
+        if r["answer_id"] not in split_of:
+            raise ValueError(f"{r['claim_id']}: unknown answer_id {r['answer_id']!r}")
+        new = split_of[r["answer_id"]]
+        if r["split"] != new:
+            changes.append((r["claim_id"], r["split"], new))
+            r["split"] = new
+    if changes:
+        tmp = sheet_path.with_suffix(".csv.tmp")
+        with tmp.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=COLUMNS)
+            w.writeheader()
+            w.writerows({c: r.get(c, "") for c in COLUMNS} for r in rows)
+        tmp.replace(sheet_path)
+    return changes
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -155,7 +183,16 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--sheet", type=Path, default=Path("eval/dataset/labels.csv"))
     v.add_argument("--sources", type=Path, default=Path("eval/sources"))
     v.add_argument("--topics", type=Path, default=Path("eval/topics.json"))
+    f = sub.add_parser("fix-splits", help="set every row's split from topics.json")
+    f.add_argument("--sheet", type=Path, default=Path("eval/dataset/labels.csv"))
+    f.add_argument("--topics", type=Path, default=Path("eval/topics.json"))
     args = ap.parse_args(argv)
+    if args.cmd == "fix-splits":
+        changes = fix_splits(args.sheet, args.topics)
+        for cid, old, new in changes:
+            print(f"{cid}: {old} -> {new}")
+        print(f"{len(changes)} row(s) changed")
+        return 0
     if args.cmd == "build":
         n = build_sheet(args.raw, args.topics, args.out)
         print(f"Wrote {n} rows to {args.out}")
@@ -163,7 +200,9 @@ def main(argv: list[str] | None = None) -> int:
     problems, stats = validate_sheet(args.sheet, args.sources, args.topics)
     for p in problems:
         print("PROBLEM:", p)
-    print("STATS:", stats)
+    for w in stats["warnings"]:
+        print("WARNING:", w)
+    print("STATS:", {k: v for k, v in stats.items() if k != "warnings"})
     return 1 if problems else 0
 
 

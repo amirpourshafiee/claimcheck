@@ -94,9 +94,11 @@ def test_validate_flags_bad_label_and_long_quote(env):
             "q02-c01": {"label": "supported", "evidence_quote": "w " * 16},
         },
     )
-    problems, _ = ls.validate_sheet(out, sources, topics)
+    problems, stats = ls.validate_sheet(out, sources, topics)
     assert any("invalid label" in p for p in problems)
-    assert any("longer than" in p for p in problems)
+    # An over-long quote is a warning, not an error: quotes feed no metric.
+    assert not any("longer than" in p for p in problems)
+    assert any("longer than" in w for w in stats["warnings"])
 
 
 def test_validate_enforces_citation_missing_rule(env):
@@ -164,5 +166,26 @@ def test_validate_flags_skewed_citation_balance(tmp_path: Path):
 
 def test_validate_accepts_balanced_citations(tmp_path: Path):
     out, sources, topics = _two_source_env(tmp_path, s1_rows=36, s2_rows=36)
+    problems, _ = ls.validate_sheet(out, sources, topics)
+    assert problems == []
+
+
+def test_fix_splits_changes_only_the_split_column_and_is_idempotent(env):
+    tmp, topics, sources, raw = env
+    out = tmp / "labels.csv"
+    ls.build_sheet(raw, topics, out)
+    _edit(
+        out,
+        **{"q02-c01": {"split": "dev", "label": "SUPPORTED", "notes": "keep me"}},  # wrong: test
+    )
+    before = {r["claim_id"]: r for r in _rows(out)}
+    assert ls.fix_splits(out, topics) == [("q02-c01", "dev", "test")]
+    after = {r["claim_id"]: r for r in _rows(out)}
+    assert after["q02-c01"]["split"] == "test"
+    for cid, row in after.items():  # everything else is untouched
+        assert {k: v for k, v in row.items() if k != "split"} == {
+            k: v for k, v in before[cid].items() if k != "split"
+        }
+    assert ls.fix_splits(out, topics) == []  # second run: nothing to do
     problems, _ = ls.validate_sheet(out, sources, topics)
     assert problems == []
