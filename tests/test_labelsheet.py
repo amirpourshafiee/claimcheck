@@ -124,3 +124,45 @@ def test_validate_requires_planted_type_for_planted_rows(env):
     _edit(out, **{"q01-c01": {"origin": "planted", "planted_type": ""}})
     problems, _ = ls.validate_sheet(out, sources, topics)
     assert any("planted rows need planted_type" in p for p in problems)
+
+
+def _two_source_env(tmp: Path, s1_rows: int, s2_rows: int):
+    topics = tmp / "topics2.json"
+    topics.write_text(
+        json.dumps(
+            [
+                {
+                    "answer_id": "q01",
+                    "split": "dev",
+                    "sources": [{"source_id": "S1"}, {"source_id": "S2"}],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    sources = tmp / "sources2"
+    sources.mkdir()
+    for sid in ("S1", "S2"):
+        (sources / f"q01_{sid}.txt").write_text("x", encoding="utf-8")
+    lines = ["claim_id,answer_id,claim_text,citation_id"]
+    lines += [f"q01-a{i},q01,fact {i},S1" for i in range(s1_rows)]
+    lines += [f"q01-b{i},q01,fact {i},S2" for i in range(s2_rows)]
+    raw = tmp / "raw2.csv"
+    raw.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    out = tmp / "labels2.csv"
+    ls.build_sheet(raw, topics, out)
+    return out, sources, topics
+
+
+def test_validate_flags_skewed_citation_balance(tmp_path: Path):
+    # Reproduces the real failure: 71 claims cite S1 and 1 cites S2.
+    out, sources, topics = _two_source_env(tmp_path, s1_rows=71, s2_rows=1)
+    problems, stats = ls.validate_sheet(out, sources, topics)
+    assert any("citation imbalance: S2" in p for p in problems)
+    assert stats["by_citation_organic"] == {"S1": 71, "S2": 1}
+
+
+def test_validate_accepts_balanced_citations(tmp_path: Path):
+    out, sources, topics = _two_source_env(tmp_path, s1_rows=36, s2_rows=36)
+    problems, _ = ls.validate_sheet(out, sources, topics)
+    assert problems == []

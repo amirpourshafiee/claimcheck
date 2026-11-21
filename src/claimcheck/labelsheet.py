@@ -31,6 +31,8 @@ COLUMNS = [
 ORIGINS = {"organic", "planted"}
 PLANTED_TYPES = {"contradiction", "unsupported_addition", "wrong_source", "fake_citation"}
 MAX_QUOTE_WORDS = 15
+# Each source id in the topics file must account for at least this share of organic claims.
+MIN_CITATION_SHARE = 0.30
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -82,7 +84,9 @@ def validate_sheet(
 ) -> tuple[list[str], dict]:
     """Check the sheet for mistakes. Returns (problems, stats). Empty problems means clean."""
     rows = _read_csv(sheet_path)
-    split_of = {t["answer_id"]: t["split"] for t in load_topics(topics_path)}
+    topics = load_topics(topics_path)
+    split_of = {t["answer_id"]: t["split"] for t in topics}
+    source_ids = sorted({s["source_id"] for t in topics for s in t["sources"]})
     problems: list[str] = []
     seen: set[str] = set()
     labels: Counter = Counter()
@@ -120,8 +124,18 @@ def validate_sheet(
             )
         if len((r.get("evidence_quote") or "").split()) > MAX_QUOTE_WORDS:
             problems.append(f"{where}: evidence_quote longer than {MAX_QUOTE_WORDS} words")
+    organic = [r for r in rows if r.get("origin") == "organic"]
+    by_citation = Counter(r.get("citation_id") for r in organic)
+    for sid in source_ids:
+        if organic and by_citation[sid] / len(organic) < MIN_CITATION_SHARE:
+            problems.append(
+                f"citation imbalance: {sid} has {by_citation[sid]} of {len(organic)} organic "
+                f"claims; each source needs at least {MIN_CITATION_SHARE:.0%} so every source "
+                "is actually tested"
+            )
     stats = {
         "rows": len(rows),
+        "by_citation_organic": dict(by_citation),
         "by_label": dict(labels),
         "by_split": dict(Counter(r.get("split") for r in rows)),
         "by_origin": dict(Counter(r.get("origin") for r in rows)),
