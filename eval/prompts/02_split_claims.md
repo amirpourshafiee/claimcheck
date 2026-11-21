@@ -20,8 +20,10 @@ Rules:
    citation_id column as S1 or S2, without brackets.
 5. Do not judge whether any claim is true or supported.
 6. Number claims per answer: q01-c01, q01-c02, ..., q02-c01, and so on.
-7. Output at most 6 claims per answer. If an answer has more, keep the first 6 in the order they
-   appear. Never choose which claims to drop by how hard or easy they look.
+7. Per answer, output at most 3 claims whose citation is S1 and at most 3 whose citation is S2.
+   Within each citation, keep the first 3 claims in the order they appear in the answer and
+   drop the rest. Never choose which claims to drop by how hard or easy they look. Number the
+   claims in the order they appear in the answer (S1 and S2 claims interleaved as written).
 
 Output ONLY one CSV code block with this exact header and one row per claim. Put any claim_text
 that contains a comma inside double quotes.

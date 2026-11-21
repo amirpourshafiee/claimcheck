@@ -11,6 +11,8 @@ file once before you label anything. Budget: about 3 to 4 hours for roughly 90 c
    as `eval/dataset/claims_raw.csv`. Then check the split: each claim is one fact, stands alone,
    and keeps the right citation. Fix mistakes by editing the CSV text. Do NOT drop or add claims
    based on whether they look easy or hard.
+   The cap is per citation (3 per source per answer), so both sources are tested. `validate`
+   fails if either source has under 30% of the organic claims.
 3. **Build the sheet (once).** `python -m claimcheck.labelsheet build` creates
    `eval/dataset/labels.csv`. It refuses to overwrite an existing sheet, so labels are safe.
 4. **Label organic claims.** Open `labels.csv` in Numbers or Google Sheets. For each row, read the
