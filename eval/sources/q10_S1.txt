@@ -1,0 +1,29 @@
+# Source: S1 | Movable type
+# URL: https://en.wikipedia.org/w/index.php?title=Movable_type&oldid=1386240441
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 630 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+Movable type (US English; moveable type in British English) is the system and technology of printing and typography that uses movable components to reproduce the elements of a document (usually individual alphanumeric characters or punctuation marks) usually on the medium of paper.
+
+== Overview ==
+
+The world's first movable type printing technology for paper books was made of porcelain materials and was invented around 1040 AD in China during the Northern Song dynasty by the inventor Bi Sheng (990–1051). The earliest printed paper money with movable metal type to print the identifying code of the money was made in 1161 during the Song dynasty. In 1193, a book in the Song dynasty documented how to use the copper movable type. The oldest extant book printed with movable metal type, Jikji, was printed in Korea in 1377 during the Goryeo dynasty.
+
+The spread of both movable-type systems was, to some degree, limited to primarily East Asia. The creation of the printing press in Europe may have been influenced by various sporadic reports of movable type technology brought back to Europe by returning business people and missionaries to China, or it may have been an independent invention. Some of these medieval European accounts are still preserved in the library archives of the Vatican and Oxford University among many others.
+
+Around 1450, German goldsmith Johannes Gutenberg invented the metal movable-type printing press, along with innovations in casting the type based on a matrix and hand mould. The small number of alphabetic characters needed for European languages was an important factor. Gutenberg was the first to create his type pieces from an alloy of lead, tin, and antimony—and these materials remained standard for 550 years.
+
+For alphabetic scripts, movable-type page setting was quicker than woodblock printing. The metal type pieces were more durable and the lettering was more uniform, leading to typography and fonts. The high quality and relatively low price of the Gutenberg Bible (1455) established the superiority of movable type in Europe and the use of printing presses spread rapidly. The printing press may be regarded as one of the key factors fostering the Renaissance and, due to its effectiveness, its use spread around the globe.
+
+The 19th-century invention of hot metal typesetting and its successors caused movable type to decline in the 20th century.
+
+== Precursors to movable type ==
+
+=== Letter punch and coins ===
+
+The technique of imprinting multiple copies of symbols or glyphs with a master type punch made of hard metal first developed around 3000 BC in ancient Sumer. These metal punch types can be seen as precursors of the letter punches adapted in later millennia to printing with movable metal type. Cylinder seals were used in Mesopotamia to create an impression on a surface by rolling the seal on wet clay.
+
+=== Seals and stamps ===
+
+Seals and stamps may have been precursors to movable type. The uneven spacing of the impressions on brick stamps found in the Mesopotamian cities of Uruk and Larsa, dating from the 2nd millennium BC, has been conjectured by some archaeologists as evidence that the stamps were made using movable type. The enigmatic Minoan Phaistos Disc of c. 1800–1600 BC has been considered by one scholar as an early example of a body of text being reproduced with reusable characters: it may have been produced by pressing pre-formed hieroglyphic "seals" into the soft clay. A few authors even view the disc as technically meeting all definitional criteria to represent an early incidence of movable-type printing. In the West the practice of sealing documents with an impressed personal or official insignia, typically from a worn signet ring, became established under the Roman Empire, and continued through the Byzantine and Holy Roman empires, into the 19th century, when a wet signature became customary.

@@ -1,0 +1,29 @@
+# Source: S2 | Linear B
+# URL: https://en.wikipedia.org/w/index.php?title=Linear_B&oldid=1381263317
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 692 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+Linear B is a syllabic script that was used for writing in Mycenaean Greek, the earliest attested form of the Greek language. The script predates the Greek alphabet by several centuries, the earliest known examples dating to around 1450 BC. It is adapted from the earlier Linear A, an undeciphered script, perhaps used for writing the Minoan language, as is the later Cypriot syllabary, which also recorded Greek. Linear B, found mainly in the palace archives at Knossos, Kydonia, Pylos, Thebes and Mycenae, disappeared with the fall of the Mycenaean civilization during the Late Bronze Age collapse. The succeeding period, known as the Greek Dark Ages, provides no conclusive evidence of the use of writing.
+
+Linear B was deciphered in 1952 by English architect and self-taught linguist Michael Ventris based on the research of the American classicist Alice Kober. It is the only Bronze Age Aegean script to have been deciphered, with Linear A, Cypro-Minoan, and Cretan hieroglyphic remaining unreadable.
+
+Linear B consists of around 87 syllabic signs and over 100 ideographic signs. These ideograms or "signifying" signs symbolize objects or commodities. They have no phonetic value and are never used as word signs in writing a sentence.
+
+The application of Linear B texts appear to have been mostly confined to administrative contexts, mainly at Mycenaean palatial sites. In the handwriting of all the thousands of clay tablets, a relatively small number of scribes have been detected: 45 in Pylos (west coast of the Peloponnese, in Southern Greece) and 66 in Knossos (Crete). The use of Linear B signs on trade objects like amphora was more widespread. Once the palaces were destroyed, the script disappeared.
+
+== Script ==
+
+Linear B has roughly 200 signs, divided into syllabic signs with phonetic values and ideograms with semantic values. The representations and naming of these signs have been standardized by a series of international colloquia starting in Paris in 1956. After the third meeting in 1961 at the Wingspread Conference Center in Racine, Wisconsin, a standard proposed primarily by Emmett L. Bennett Jr. became known as the Wingspread Convention, which was adopted by a new organization, the Comité International Permanent des Études Mycéniennes (CIPEM: Permanent International Committee of Mycenaean Studies), affiliated in 1970 by the fifth colloquium with UNESCO. Colloquia continue: the 13th occurred in 2010 in Paris.
+
+Many of the signs are identical or similar to those in Linear A; however, Linear A encodes an as yet unknown language, and it is uncertain whether similar signs had the same phonetic values.
+
+=== Syllabic signs ===
+
+The grid developed during decipherment by Michael Ventris and John Chadwick of phonetic values for syllabic signs is shown below. (Note that "q" represents the labialized velar stops [ɡʷ, kʷ, kʷʰ], not the uvular stop of the IPA, whereas "j" does represent the IPA voiced palatal approximant [j], represented by the letter "y" in English words such as "yes" and "yoke".)
+
+Initial consonants are in the leftmost column; vowels are in the top row beneath the title. The transcription of the syllable, which may not have been pronounced that way, is listed next to the sign along with Bennett's identifying number for the sign preceded by an asterisk (as was Ventris's and Chadwick's convention). If the transcription of the sign remains uncertain, Bennett's number serves to identify the sign. The signs on the tablets and sealings often show considerable variation from each other and from the representations below. Discovery of the reasons for the variation and possible semantic differences is a topic of ongoing debate in Mycenaean studies.
+
+=== Special and unknown signs ===
+
+In addition to the grid, the first edition of Documents in Mycenaean Greek contained a number of other signs termed "homophones" because they appeared at that time to resemble the sounds of other syllables and were transcribed accordingly: pa2 and pa3 were presumed homophonous to pa. Many of these were identified by the second edition and are shown in the "special values" below. The second edition relates: "It may be taken as axiomatic that there are no true homophones." The unconfirmed identifications of *34 and *35 as ai2 and ai3 were removed. pa2 became qa.

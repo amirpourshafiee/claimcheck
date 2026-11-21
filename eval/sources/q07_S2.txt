@@ -1,0 +1,29 @@
+# Source: S2 | Millennium Bridge, London
+# URL: https://en.wikipedia.org/w/index.php?title=Millennium_Bridge%2C_London&oldid=1375207606
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 696 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+The Millennium Bridge, officially known as the London Millennium Footbridge, is a steel suspension bridge for pedestrians crossing the River Thames in London, England, linking Bankside with the City of London. It is owned and maintained by Bridge House Estates, a charitable trust overseen by the City of London Corporation. Construction began in 1998, and it initially opened on 10 June 2000.
+
+Londoners nicknamed it the "Wobbly Bridge" and even the "Wibbly Wobbly" after pedestrians experienced an alarming swaying motion on its opening day. The bridge was closed later that day and, after two days of limited access, it was closed again for almost two years so that modifications and repairs could be made to keep the bridge stable and stop the swaying motion. It reopened in February 2002, after real-life safety tests were conducted by 700 staff from engineering consultancy Arup.
+
+The bridge is located between Southwark Bridge and Blackfriars Railway Bridge. Its southern end is near the Globe Theatre, the Bankside Gallery, and Tate Modern, while its northern end is next to the City of London School below St Paul's Cathedral. The bridge's alignment is such that a clear view (i.e. a "terminating vista") of St Paul's south façade is presented from across the river, framed by the bridge supports.
+
+== Design ==
+
+An architectural design competition was organised in 1996 by Southwark council and RIBA Competitions. The winning entry was an innovative "blade of light" effort from Arup Group, Foster + Partners and Anthony Caro. Due to height restrictions, and to improve the view, the bridge's suspension design had the supporting cables below the deck level, giving a very shallow profile. The bridge has two river piers and consists of three main sections of 81 m (266 ft), 144 m (472 ft), 108 m (354 ft) (north to south) with a total structure length of 325 m (1,066 ft); the aluminium deck is 4 m (13 ft) wide. The eight suspension cables are tensioned to pull with a force of 2,000 tons against the piers set into each bank—enough to support a working load of 5,000 people.
+
+== Construction ==
+
+Ordinarily, bridges across the River Thames require an Act of Parliament. For this bridge, that was avoided by the Port of London Authority granting a licence for the structure, and the City of London and London Borough of Southwark granting planning permission. Construction began in late 1998, and the main works were started on 28 April 1999 by Monberg & Thorsen and Sir Robert McAlpine. The eventual cost was £18.2 million (£2.2m over budget), primarily paid for by the Millennium Commission and the London Bridge Trust.
+
+== Opening ==
+
+The bridge opened on 10 June 2000, one month late. Unexpected lateral vibration due to resonant structural response caused the bridge to be closed on 12 June for modifications. Attempts had been made to limit the number of people crossing the bridge, which led to long queues but were ineffective to dampen the vibrations. Closure of the bridge only two days after opening attracted public criticism as another high-profile British Millennium project that suffered an embarrassing setback, akin to how many saw the Millennium Dome.
+
+The vibration was attributed to a then under-researched phenomenon whereby pedestrians crossing a bridge that has a lateral sway have an unconscious tendency to match their footsteps to the sway, exacerbating it. This is different from the well-understood problem of vertical sway, which is why troops stop marching in stride together as a unit when crossing such a bridge. An example is London's Albert Bridge, which has a sign dating from 1873 warning marching ranks of soldiers to break step while crossing.
+
+== Resonance ==
+
+The bridge's movements were caused by a positive feedback phenomenon, known as synchronous lateral excitation. The natural sway motion of people walking caused small sideways oscillations in the bridge, which in turn caused people on the bridge to sway in step, increasing the amplitude of the bridge oscillations and continually reinforcing the effect; the maximum sway was around 70 millimetres (2.8 in). On the day of opening, the bridge was crossed by 90,000 people, with up to 2,000 on the bridge at a time.

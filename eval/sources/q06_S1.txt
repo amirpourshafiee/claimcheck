@@ -1,0 +1,27 @@
+# Source: S1 | CRISPR
+# URL: https://en.wikipedia.org/w/index.php?title=CRISPR&oldid=1385697015
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 650 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+CRISPR (; acronym for clustered regularly interspaced short palindromic repeats) is a family of DNA sequences found in the genomes of prokaryotic organisms such as bacteria and archaea. Each sequence within an individual prokaryotic CRISPR is derived from a DNA fragment of a bacteriophage that had previously infected the prokaryote or one of its ancestors. These sequences are used to detect and destroy DNA from similar bacteriophages during subsequent infections. Hence these sequences play a key role in the antiviral (i.e. anti-phage) defense system of prokaryotes and provide a form of heritable, acquired immunity. CRISPR is found in approximately 50% of sequenced bacterial genomes and nearly 90% of sequenced archaea.
+
+Cas9 (or "CRISPR-associated protein 9") is an enzyme that uses CRISPR sequences as a guide to recognize and open up specific strands of DNA that are complementary to the CRISPR sequence. Cas9 enzymes together with CRISPR sequences form the basis of a technology known as CRISPR-Cas9 that can be used to edit genes within living organisms. This editing process has a wide variety of applications including basic biological research, development of biotechnological products, and treatment of diseases. The development of the CRISPR-Cas9 genome editing technique was recognized by the Nobel Prize in Chemistry in 2020 awarded to Emmanuelle Charpentier and Jennifer Doudna.
+
+== History ==
+
+The CRISPR/Cas system evolved in nature as a means for bacteria to protect themselves from invading viruses and bacteriophages by inserting pieces of their DNA into the host genome. This allowed the adaptive immune system to respond accordingly on a subsequent infection. It was discovered in Streptococcus pyogenes and later found across many other species.
+
+=== Repeated sequences ===
+
+The discovery of clustered DNA repeats took place independently in three parts of the world. The first description of what would later be called CRISPR is Ishino, et al. in 1987. They accidentally cloned part of a CRISPR sequence together with the iap gene (isozyme conversion of alkaline phosphatase) from Escherichia coli. The organization of the repeats surprised them, as clustered repeated sequences are more typically arranged consecutively, without interspersing sequences.
+
+In 1993, van Solingen et al., published two articles about a cluster of interrupted direct repeats (DR) in that bacterium. The team recognized the diversity of the sequences that intervened in the direct repeats among different strains of M. tuberculosis and used this property to design a typing method called spoligotyping, which remains in use.
+
+Spanish microbiologist Francisco Mojica studied the function of repeats in the archaeal genera Haloferax and Haloarcula. Mojica's supervisor surmised that the clustered repeats had a role in segregating replicated DNA into daughter cells during cell division, because plasmids and chromosomes with identical repeat arrays could not coexist in Haloferax volcanii. They noted the transcription of the interrupted repeats for the first time; CRISPR's first full characterization. By 2000, Mojica and his students, after an automated search of published genomes, identified interrupted repeats in 20 species of microbes as belonging to the same family. Because those sequences were interspaced, Mojica initially called these sequences "short regularly spaced repeats" (SRSR). In 2001, Mojica and Jansen, who were searching for additional interrupted repeats, proposed the acronym CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) to encompass  the numerous acronyms then in use. In 2002, Tang, et al. showed evidence that CRISPR repeat regions in Archaeoglobus fulgidus were transcribed into long RNA molecules subsequently processed into unit-length small RNAs, plus some longer forms of 2, 3, or more spacer-repeat units.
+
+In 2005, Barrangou discovered that S thermophilus, after iterative phage infection challenges, develops increased phage resistance due to the incorporation of additional CRISPR spacer sequences.
+
+== CRISPR-associated systems ==
+
+A major advance came with Jansen's observation that the prokaryote repeat cluster was accompanied by four homologous genes, CRISPR-associated systems, Cas 1–4. The Cas proteins showed helicase and nuclease motifs, suggesting a role in the dynamic structure of the CRISPR loci. However, CRISPR's function remained enigmatic.
