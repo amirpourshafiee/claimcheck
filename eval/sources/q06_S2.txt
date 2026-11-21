@@ -1,0 +1,31 @@
+# Source: S2 | Polymerase chain reaction
+# URL: https://en.wikipedia.org/w/index.php?title=Polymerase_chain_reaction&oldid=1385772430
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 694 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+The polymerase chain reaction (PCR) is a laboratory method widely used to amplify copies of specific DNA sequences rapidly, to enable detailed study. PCR was invented in 1983 by American biochemist Kary Mullis at Cetus Corporation. Mullis and biochemist Michael Smith, who had developed other essential ways of manipulating DNA, were jointly awarded the Nobel Prize in Chemistry in 1993.
+
+PCR is fundamental to many of the procedures used in genetic testing, research, including analysis of ancient samples of DNA, and identification of infectious agents. Using PCR, copies of very small amounts of DNA sequences are exponentially amplified in a series of cycles of temperature changes. PCR is now a common and often indispensable technique used in medical laboratory research for a broad variety of applications including biomedical research and forensic science.
+
+The majority of PCR methods rely on thermal cycling. Thermal cycling exposes reagents to repeated cycles of heating and cooling to permit different temperature-dependent reactions—specifically, DNA melting and enzyme-driven DNA replication. PCR employs two main reagents—primers (which are short single strand DNA fragments known as oligonucleotides that are a complementary sequence to the target DNA region) and a thermostable DNA polymerase. In the first step of PCR, the two strands of the DNA double helix are physically separated at a high temperature in a process called nucleic acid denaturation. In the second step, the temperature is lowered and the primers bind to the complementary sequences of DNA. The two DNA strands then become templates for DNA polymerase to enzymatically assemble a new DNA strand from free nucleotides, the building blocks of DNA. As PCR progresses, the DNA generated is itself used as a template for replication, setting in motion a chain reaction in which the original DNA template is exponentially amplified.
+
+Almost all PCR applications employ a heat-stable DNA polymerase, such as Taq polymerase, an enzyme originally isolated from the thermophilic bacterium Thermus aquaticus discovered by the glycobiologist Hudson H. Freeze and microbiologist Thomas D. Brock in 1969. If the polymerase used was heat-susceptible, it would denature under the high temperatures of the denaturation step. Before the use of Taq polymerase, DNA polymerase had to be manually added every cycle, which was a tedious and costly process.
+
+Applications of the technique include DNA cloning for sequencing, gene cloning and manipulation, gene mutagenesis; construction of DNA-based phylogenies, or functional analysis of genes; diagnosis and monitoring of genetic disorders; amplification of ancient DNA; analysis of genetic fingerprints for DNA profiling (for example, in forensic science and parentage testing); and detection of pathogens in nucleic acid tests for the diagnosis of infectious diseases.
+
+== Principles ==
+
+PCR amplifies a specific region of a DNA strand (the DNA target). Most PCR methods amplify DNA fragments of between 0.1 and 10 kilo-base pairs (kbp) in length, although some techniques allow for amplification of fragments up to 40 kbp. The amount of amplified product is determined by the available substrates in the reaction, which becomes limiting as the reaction progresses.
+
+A basic PCR set-up requires several components and reagents, including:
+
+a DNA template that contains the DNA target region to amplify
+
+a DNA polymerase; an enzyme that polymerizes new DNA strands; heat-resistant Taq polymerase is especially common, as it is more likely to remain intact during the high-temperature DNA denaturation process. Pfu polymerase is a heat-resistant polymerase with higher accuracy compared to Taq due to its ability to proofread, but it runs slower. Adding a small amount of Pfu to Taq combines the benefits of both.
+
+two DNA primers that are complementary to the 3' (three prime) ends of each of the sense and anti-sense strands of the DNA target (DNA polymerase can only bind to and elongate from a double-stranded region of DNA; without primers, there is no double-stranded initiation site at which the polymerase can bind); specific primers that are complementary to the DNA target region are selected beforehand, and are often custom-made in a laboratory or purchased from commercial biochemical suppliers
+
+deoxynucleoside triphosphates, or dNTPs, the building blocks from which the DNA polymerase synthesizes a new DNA strand
+
+a buffer solution providing a suitable chemical environment for optimum activity and stability of the DNA polymerase

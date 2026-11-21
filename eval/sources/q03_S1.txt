@@ -1,0 +1,31 @@
+# Source: S1 | Voyager 1
+# URL: https://en.wikipedia.org/w/index.php?title=Voyager_1&oldid=1386833792
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 635 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+Voyager 1 is a space probe launched by NASA on September 5, 1977, as part of the Voyager program, to study the outer Solar System and the interstellar space beyond the Sun's heliosphere. At a distance of 173.02 AU (25.9 billion km; 16.1 billion mi) as of November 2026, it is the most distant human-made object from Earth.
+
+It was launched 16 days after its twin, Voyager 2. It communicates through the NASA Deep Space Network (DSN) to receive routine commands and to transmit data to Earth. Real-time distance and velocity data are provided by NASA and JPL.
+
+The probe made flybys of Jupiter, Saturn, and Saturn's largest moon, Titan. NASA had a choice of either conducting a Pluto or Titan flyby. Exploration of Titan took priority because it was known to have a substantial atmosphere. Voyager 1 studied the weather, magnetic fields, and rings of the two gas giants and was the first probe to provide detailed images of their moons.
+
+As part of the Voyager program and like its sister craft Voyager 2, the spacecraft's extended mission is to locate and study the regions and boundaries of the outer heliosphere and to begin exploring the interstellar medium. Voyager 1 crossed the heliopause and entered interstellar space on August 25, 2012, making it the first spacecraft to do so. Two years later, Voyager 1 began experiencing a third wave of coronal mass ejections from the Sun that continued to at least December 15, 2014, further confirming that the probe is in interstellar space.
+
+In 2017, the Voyager team successfully fired the spacecraft's trajectory correction maneuver (TCM) thrusters for the first time since 1980, enabling the mission to be extended by two to three years. Voyager 1 experienced successful revivals of several thrusters in 2018, 2019, and 2025.
+
+Voyager 1's extended mission is expected to continue to return scientific data for several more years. As of 2026, two instruments are operational and returning data, the Plasma Wave Subsystem and magnetometer. Its radioisotope thermoelectric generators (RTGs) may supply enough electric power to return engineering data until 2036.
+
+== Mission background ==
+
+A 1960s proposal for a Grand Tour to study the outer planets led NASA to begin work on a mission during the early 1970s. Initially, Voyager 1 was planned as Mariner 11 of the Mariner program. Due to budget cuts, the mission was reduced to a flyby of Jupiter and Saturn and renamed the Mariner Jupiter-Saturn probes. The name was changed to Voyager when the probe designs began to differ substantially from Mariner missions.
+
+=== Spacecraft components ===
+
+Voyager 1 was built by the Jet Propulsion Laboratory (JPL). It has a bus shaped like a decagonal (ten-sided) prism. It has 16 hydrazine thrusters, three-axis stabilization gyroscopes, and referencing instruments to keep the probe's radio antenna pointed toward Earth. Collectively, these instruments are part of the Attitude and Articulation Control Subsystem (AACS), along with redundant units of most instruments and eight backup thrusters. The spacecraft also included 11 scientific instruments to study celestial objects such as planets as it travels through space.
+
+==== Communication system ====
+
+The radio communication system of Voyager 1 was designed to be used up to and beyond the limits of the Solar System. It has a 3.7-meter (12 ft) diameter high-gain Cassegrain antenna to send and receive radio waves via the three Deep Space Network stations on the Earth. The spacecraft normally transmits data to Earth over Deep Space Network Channel 18, using a frequency of either 2.3 GHz or 8.4 GHz, while signals from Earth to Voyager are transmitted at 2.1 GHz.
+
+When Voyager 1 is unable to communicate with the Earth, its digital tape recorder (DTR) can record about 64 megabytes of data for later transmission. As of 2026, signals from Voyager 1 take 24 hours to reach Earth.

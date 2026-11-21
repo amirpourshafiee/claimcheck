@@ -1,0 +1,43 @@
+# Source: S1 | Lead–acid battery
+# URL: https://en.wikipedia.org/w/index.php?title=Lead%E2%80%93acid_battery&oldid=1379664734
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 698 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+The lead–acid battery is a type of rechargeable battery. First invented in 1859 by French physicist Gaston Planté, it was the first type of rechargeable battery ever created. Compared to the more modern rechargeable batteries, lead–acid batteries have relatively low energy density and heavier weight. Despite this, they are able to supply high surge currents. These features, along with their low cost, make them useful for motor vehicles in order to provide the high current required by starter motors. Lead–acid batteries suffer from relatively short cycle lifespan (usually less than 500 deep cycles) and overall lifespan (due to the double sulfation in the discharged state), as well as long charging times; an average automotive battery takes anywhere between 6 and 12 hours to fully charge from a discharged state.
+
+As they are not as expensive when compared to newer technologies, lead–acid batteries are widely used even when surge current is not important and other designs could provide higher energy densities. In 1999, lead–acid battery sales accounted for 40–50% of the value from batteries sold worldwide (excluding China and Russia), equivalent to a manufacturing market value of about US$15 billion. Large-format lead–acid designs are widely used for storage in backup power supplies in telecommunications networks such as for cell sites, high-availability emergency power systems as used in hospitals, and stand-alone power systems. For these roles, modified versions of the standard cell may be used to improve storage times and reduce maintenance requirements. Gel cell and absorbed glass mat batteries are common in these roles, collectively known as valve-regulated lead–acid (VRLA) batteries.
+
+When charged, the battery's chemical energy is stored in the potential difference between metallic lead at the negative side and lead dioxide on the positive side.
+
+== History ==
+
+The French scientist Nicolas Gautherot observed in 1801 that wires that had been used for electrolysis experiments would themselves provide a small amount of secondary current after the main battery had been disconnected. In 1859, Gaston Planté's lead–acid battery was the first battery that could be recharged by passing a reverse current through it. Planté's first model consisted of two lead sheets separated by rubber strips and rolled into a spiral and immersed in a solution containing about 10 percent sulfuric acid. His batteries were first used to power the lights in train carriages while stopped at a station. In 1881, Camille Alphonse Faure invented an improved version that consisted of a lead grid lattice into which a lead oxide paste was pressed, forming a plate. This design was easier to mass-produce. An early manufacturer (from 1886) of lead–acid batteries was Henri Tudor.
+
+Using a gel electrolyte instead of a liquid allows the battery to be used in different positions without leaking. Gel electrolyte batteries for any position were first used in the late 1920s, and in the 1930s, portable suitcase radio sets allowed the cell to be mounted vertically or horizontally (but not inverted) due to valve design. In the 1970s, the valve-regulated lead–acid (VRLA), or sealed, battery was developed, including modern absorbed glass mat (AGM) types, allowing operation in any position.
+
+It was discovered early in 2011 that lead–acid batteries do in fact use some aspects of relativity to function, and to a lesser degree, liquid metal and molten-salt batteries such as the Ca-Sb and Sn-Bi also use this effect.
+
+== Electrochemistry ==
+
+=== Discharge ===
+
+In the discharged state, both the positive and negative plates become lead(II) sulfate (PbSO4), and the electrolyte loses much of its dissolved sulfuric acid and becomes primarily water.
+
+Negative plate reaction
+
+Pb(s) + HSO−4(aq) → PbSO4(s) + H+(aq) + 2e−
+
+The release of two conduction electrons gives the lead electrode a negative charge.
+
+As electrons accumulate, they create an electric field that attracts hydrogen ions and repels sulfate ions, leading to a double layer near the surface. The hydrogen ions screen the charged electrode from the solution, which limits further reaction unless charge is allowed to flow out of the electrode.
+
+Positive plate reaction
+
+PbO2(s) + HSO−4(aq) + 3H+(aq) + 2e− → PbSO4(s) + 2H2O(l)
+
+taking advantage of the metallic conductivity of PbO2.
+
+The total reaction can be written as
+
+Pb(s) + PbO2(s) + 2H2SO4(aq) → 2PbSO4(s) + 2H2O(l)               Ecell∘=2.05 V

@@ -1,0 +1,25 @@
+# Source: S2 | Voyager 2
+# URL: https://en.wikipedia.org/w/index.php?title=Voyager_2&oldid=1386836375
+# License: CC BY-SA 4.0 (Wikipedia contributors)
+# Excerpt: first 656 words, whole paragraphs only
+# Retrieved: 2026-11-20
+---
+Voyager 2 is a space probe launched by NASA on August 20, 1977, as a part of the Voyager program. It was launched on a trajectory towards the gas giants (Jupiter and Saturn) and enabled further encounters with the ice giants (Uranus and Neptune). The only spacecraft to have visited either of the ice giant planets, it was the third of five spacecraft to achieve Solar escape velocity, which allowed it to leave the Solar System. Launched 16 days before its twin Voyager 1, the primary mission of the spacecraft was to study the outer planets and its extended mission is to study interstellar space beyond the Sun's heliosphere.
+
+Voyager 2 successfully fulfilled its primary mission of visiting the Jovian system in 1979, the Saturnian system in 1981, Uranian system in 1986, and the Neptunian system in 1989. The spacecraft is now in its extended mission of studying the interstellar medium. It is at a distance of 143.05 AU (21.4 billion km; 13.3 billion mi) from Earth as of February 2026.
+
+The probe entered the interstellar medium on November 5, 2018, at a distance of 119.7 AU (11.1 billion mi; 17.9 billion km) from the Sun and moving at 15.341 km/s (34,320 mph) relative to the Sun. Voyager 2 has left the Sun's heliosphere and is traveling through the interstellar medium, though still inside the Solar System, joining Voyager 1, which reached the interstellar medium in 2012. Voyager 2 has begun to provide the first direct measurements of the density and temperature of the interstellar plasma.
+
+Voyager 2 is in contact with Earth through the NASA Deep Space Network. Communications are the responsibility of Australia's DSS 43 communication antenna, part of the Canberra communication complex; the craft's southern trajectory puts it out of range of the network's Goldstone and Madrid complexes.
+
+== History ==
+
+=== Background ===
+
+In the early space age, it was realized that a periodic alignment of the outer planets would occur in the late 1970s and enable a single probe to visit Jupiter, Saturn, Uranus, and Neptune by taking advantage of the then-new technique of gravity assists. NASA began work on a Grand Tour, which evolved into a massive project involving two groups of two probes each, with one group visiting Jupiter, Saturn, and Pluto and the other Jupiter, Uranus, and Neptune. The spacecraft would be designed with redundant systems to ensure survival throughout the entire tour. By 1972 the mission was scaled back and replaced with two Mariner program-derived spacecraft, the Mariner Jupiter–Saturn probes. To keep apparent lifetime program costs low, the mission would include only flybys of Jupiter and Saturn, but keep the Grand Tour option open. As the program progressed, the name was changed to Voyager.
+
+The primary mission of Voyager 1 was to explore Jupiter, Saturn, and Saturn's largest moon, Titan. Voyager 2 was also to explore Jupiter and Saturn, but on a trajectory that would have the option of continuing on to Uranus and Neptune, or being redirected to Titan as a backup for Voyager 1. Upon successful completion of Voyager 1's objectives, Voyager 2 would get a mission extension to send the probe on towards Uranus and Neptune. Titan was selected due to the interest developed after the images taken by Pioneer 11 in 1979, which had indicated the atmosphere of the moon was substantial and complex. Hence the trajectory was designed for optimum Titan flyby.
+
+=== Spacecraft design ===
+
+Constructed by the California-based Jet Propulsion Laboratory (JPL), Voyager 2, whose bus is shaped like a decagonal prism, included 16 hydrazine thrusters, three-axis stabilization, gyroscopes and celestial referencing instruments (a Sun sensor, and a Canopus star tracker) to maintain pointing of the high-gain antenna toward Earth. Collectively these instruments are part of the Attitude and Articulation Control Subsystem (AACS) along with redundant units of most instruments and 8 backup thrusters. The spacecraft also included 11 scientific instruments to study celestial objects as it traveled through space.

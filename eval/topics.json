@@ -1,0 +1,182 @@
+[
+  {
+    "answer_id": "q01",
+    "question": "How did ancient and medieval devices model the motion of the sky?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Antikythera mechanism"
+      },
+      {
+        "source_id": "S2",
+        "title": "Astrolabe"
+      }
+    ]
+  },
+  {
+    "answer_id": "q02",
+    "question": "How do lead-acid and lithium-ion batteries differ in design and typical use?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Lead–acid battery"
+      },
+      {
+        "source_id": "S2",
+        "title": "Lithium-ion battery"
+      }
+    ]
+  },
+  {
+    "answer_id": "q03",
+    "question": "What did the Voyager 1 and Voyager 2 space probes accomplish?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Voyager 1"
+      },
+      {
+        "source_id": "S2",
+        "title": "Voyager 2"
+      }
+    ]
+  },
+  {
+    "answer_id": "q04",
+    "question": "How do tardigrades survive harsh conditions compared with other extremophiles?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Tardigrade"
+      },
+      {
+        "source_id": "S2",
+        "title": "Extremophile"
+      }
+    ]
+  },
+  {
+    "answer_id": "q05",
+    "question": "How were ancient writing systems deciphered, using the Rosetta Stone and Linear B as examples?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Rosetta Stone"
+      },
+      {
+        "source_id": "S2",
+        "title": "Linear B"
+      }
+    ]
+  },
+  {
+    "answer_id": "q06",
+    "question": "How do CRISPR and PCR work, and how do they differ?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "CRISPR"
+      },
+      {
+        "source_id": "S2",
+        "title": "Polymerase chain reaction"
+      }
+    ]
+  },
+  {
+    "answer_id": "q07",
+    "question": "Why did the Tacoma Narrows Bridge collapse, and what caused the Millennium Bridge wobble?",
+    "split": "dev",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Tacoma Narrows Bridge (1940)"
+      },
+      {
+        "source_id": "S2",
+        "title": "Millennium Bridge, London"
+      }
+    ]
+  },
+  {
+    "answer_id": "q08",
+    "question": "How did the transistor replace the vacuum tube?",
+    "split": "dev",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Transistor"
+      },
+      {
+        "source_id": "S2",
+        "title": "Vacuum tube"
+      }
+    ]
+  },
+  {
+    "answer_id": "q09",
+    "question": "How do the Panama Canal and the Suez Canal compare?",
+    "split": "dev",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Panama Canal"
+      },
+      {
+        "source_id": "S2",
+        "title": "Suez Canal"
+      }
+    ]
+  },
+  {
+    "answer_id": "q10",
+    "question": "How did movable type change printing in Europe?",
+    "split": "dev",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Movable type"
+      },
+      {
+        "source_id": "S2",
+        "title": "Printing press"
+      }
+    ]
+  },
+  {
+    "answer_id": "q11",
+    "question": "How did the Enigma machine and the Lorenz cipher differ, and how were they broken?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Enigma machine"
+      },
+      {
+        "source_id": "S2",
+        "title": "Lorenz cipher"
+      }
+    ]
+  },
+  {
+    "answer_id": "q12",
+    "question": "What went wrong on Apollo 13, and how did it differ from Apollo 11?",
+    "split": "test",
+    "sources": [
+      {
+        "source_id": "S1",
+        "title": "Apollo 13"
+      },
+      {
+        "source_id": "S2",
+        "title": "Apollo 11"
+      }
+    ]
+  }
+]
