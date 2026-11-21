@@ -20,6 +20,8 @@ from claimcheck.llm import LLMClient
 from claimcheck.schema import Claim, Label, Verdict
 
 PROMPT_VERSION = "v1"
+# Rationale prefix for a claim whose reply could not be parsed. evaluate.py counts these.
+JUDGE_ERROR_PREFIX = "[judge error]"
 # CITATION_MISSING is decided by match.py without calling a judge, so the model may not emit it.
 JUDGE_LABELS = (Label.SUPPORTED, Label.CONTRADICTED, Label.NOT_MENTIONED)
 
@@ -70,12 +72,43 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
+def _json_objects(text: str) -> list[dict]:
+    """Every top-level JSON object in `text`, in order, ignoring prose around them."""
+    decoder = json.JSONDecoder()
+    found: list[dict] = []
+    i = text.find("{")
+    while i != -1:
+        try:
+            obj, end = decoder.raw_decode(text, i)
+        except json.JSONDecodeError:
+            i = text.find("{", i + 1)
+            continue
+        if isinstance(obj, dict):
+            found.append(obj)
+        i = text.find("{", end)
+    return found
+
+
+def _load_reply(reply: str):
+    """Parse the reply. Haiku 5.5 sometimes adds prose and a second, "cleaned" JSON object after
+    the first. That is accepted only if every object carries the same label; disagreeing objects
+    are ambiguous, so they are an error rather than a guess."""
+    text = strip_code_fence(reply)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as e:
+        objects = _json_objects(text)
+        if not objects:
+            raise JudgeError(f"reply is not valid JSON: {e}") from e
+        labels = {str(o.get("label", "")).strip().upper() for o in objects}
+        if len(labels) > 1:
+            raise JudgeError(f"reply contains conflicting verdicts: {sorted(labels)}") from e
+        return objects[0]
+
+
 def parse_verdict(reply: str, claim_id: str, source_text: str, judge_name: str) -> Verdict:
     """Validate a model reply. Raises JudgeError on anything malformed."""
-    try:
-        data = json.loads(strip_code_fence(reply))
-    except json.JSONDecodeError as e:
-        raise JudgeError(f"reply is not valid JSON: {e}") from e
+    data = _load_reply(reply)
     if not isinstance(data, dict) or not isinstance(data.get("label"), str):
         raise JudgeError("reply must be a JSON object with a string 'label'")
     try:

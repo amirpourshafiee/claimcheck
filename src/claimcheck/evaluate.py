@@ -25,7 +25,7 @@ from pathlib import Path
 
 from claimcheck.baseline import LexicalBaseline
 from claimcheck.dataset import Example, load_examples, load_sources
-from claimcheck.judge import Judge
+from claimcheck.judge import JUDGE_ERROR_PREFIX, Judge, JudgeError
 from claimcheck.metrics import bootstrap_ci, cohen_kappa, confusion_matrix, flagged_prf
 from claimcheck.pipeline import check_claims
 from claimcheck.schema import Label, Verdict
@@ -42,8 +42,20 @@ def run_judge(
         by_answer[ex.answer_id].append(ex.claim)
     verdicts: dict[str, Verdict] = {}
     for answer_id, claims in by_answer.items():
-        report = check_claims(answer_id, claims, sources.get(answer_id, {}), judge)
-        verdicts.update({v.claim_id: v for v in report.verdicts})
+        for claim in claims:
+            try:
+                report = check_claims(answer_id, [claim], sources.get(answer_id, {}), judge)
+            except JudgeError as e:
+                # One unparseable reply must not abort a paid run. It is scored as SUPPORTED
+                # (not flagged), which can only hurt the judge's recall, and it is counted.
+                verdicts[claim.claim_id] = Verdict(
+                    claim.claim_id,
+                    Label.SUPPORTED,
+                    rationale=f"{JUDGE_ERROR_PREFIX} {e}",
+                    judge=getattr(judge, "name", ""),
+                )
+                continue
+            verdicts.update({v.claim_id: v for v in report.verdicts})
     return verdicts
 
 
@@ -93,6 +105,9 @@ def evaluate(
     gold_missing = [(ex, p) for ex, p in rows if ex.gold is Label.CITATION_MISSING]
     views = {"end_to_end": rows, "judge_only": [r for r in rows if r not in gold_missing]}
     out: dict = {
+        "judge_errors": sorted(
+            cid for cid, v in verdicts.items() if v.rationale.startswith(JUDGE_ERROR_PREFIX)
+        ),
         "views": {},
         "matcher_check": {
             "gold_citation_missing": len(gold_missing),
@@ -141,6 +156,11 @@ def to_markdown(results: dict, title: str) -> str:
         f"Citation matcher: caught {m['caught']} of {m['gold_citation_missing']} missing "
         f"citations, {m['false_alarms']} false alarms."
     )
+    if results.get("judge_errors"):
+        lines.append(
+            f"Judge errors (unparseable reply, scored as not flagged): "
+            f"{len(results['judge_errors'])}: {', '.join(results['judge_errors'])}."
+        )
     return "\n".join(lines) + "\n"
 
 

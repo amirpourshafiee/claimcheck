@@ -64,3 +64,26 @@ def test_build_user_prompt_strips_surrounding_whitespace():
     assert (
         build_user_prompt(Claim("c", "x"), "\n body \n") == "<source>\nbody\n</source>\n\nClaim: x"
     )
+
+
+def test_parse_accepts_prose_and_a_second_object_when_labels_agree():
+    # Real Haiku 5.5 behavior seen on 2026-11-21: a verdict, then a "correction", then another.
+    reply = f"{_reply()}\n\nCorrection to the formatting above, cleanly:\n\n{_reply()}"
+    v = parse_verdict(reply, "c1", SOURCE, "j")
+    assert v.label is Label.SUPPORTED
+
+
+def test_parse_rejects_two_objects_with_conflicting_labels():
+    reply = f"{_reply('SUPPORTED')}\nActually:\n{_reply('CONTRADICTED')}"
+    with pytest.raises(JudgeError, match="conflicting"):
+        parse_verdict(reply, "c1", SOURCE, "j")
+
+
+def test_parse_ignores_stray_braces_in_prose():
+    reply = f"Here is {{my}} answer: {_reply()}"
+    assert parse_verdict(reply, "c1", SOURCE, "j").label is Label.SUPPORTED
+
+
+def test_parse_still_rejects_prose_without_any_json_object():
+    with pytest.raises(JudgeError):
+        parse_verdict("I think it is supported.", "c1", SOURCE, "j")
