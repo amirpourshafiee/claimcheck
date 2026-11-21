@@ -107,3 +107,25 @@ def test_ci_is_withheld_when_too_few_answers_to_resample():
     many = [ex(f"x{i}", N, answer=f"q{i}") for i in range(6)]
     res = evaluate(many, verdicts(**{f"x{i}": N for i in range(6)}), n_resamples=50)
     assert res["views"]["end_to_end"]["slices"][0]["f1_ci95"] is not None
+
+
+def test_run_judge_survives_an_unparseable_reply_and_counts_it():
+    from claimcheck.judge import JudgeError
+
+    class Flaky:
+        name = "flaky"
+
+        def judge(self, claim, source_text):
+            if claim.claim_id == "bad":
+                raise JudgeError("reply is not valid JSON")
+            return Verdict(claim.claim_id, C)
+
+    examples = [ex("good", C), ex("bad", C)]
+    out = run_judge(examples, {"q01": {"S1": "text"}}, Flaky())
+    assert out["good"].label is C
+    # Scored as not flagged, so it is a miss against a flagged gold label, never a free hit.
+    assert out["bad"].label is S and out["bad"].rationale.startswith("[judge error]")
+    results = evaluate(examples, out)
+    assert results["judge_errors"] == ["bad"]
+    assert results["views"]["end_to_end"]["slices"][0]["fn"] == 1
+    assert "Judge errors" in to_markdown(results, "t")
