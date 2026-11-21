@@ -16,6 +16,7 @@ prompts and thresholds are still being tuned on dev.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 from collections import defaultdict
@@ -164,6 +165,52 @@ def to_markdown(results: dict, title: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+PREDICTION_COLUMNS = [
+    "claim_id",
+    "answer_id",
+    "split",
+    "origin",
+    "planted_type",
+    "gold",
+    "pred",
+    "gold_flagged",
+    "pred_flagged",
+    "correct",
+    "evidence_quote",
+    "rationale",
+]
+
+
+def predictions_to_csv(
+    examples: Sequence[Example], verdicts: dict[str, Verdict], path: Path
+) -> None:
+    """One row per claim, for error analysis. Wrong rows are sorted first."""
+    rows = []
+    for ex in examples:
+        v = verdicts[ex.claim.claim_id]
+        rows.append(
+            [
+                ex.claim.claim_id,
+                ex.answer_id,
+                ex.split,
+                ex.origin,
+                ex.planted_type,
+                ex.gold.value,
+                v.label.value,
+                ex.gold.is_flagged,
+                v.label.is_flagged,
+                ex.gold is v.label,
+                v.evidence_quote,
+                v.rationale,
+            ]
+        )
+    rows.sort(key=lambda r: (r[9], r[0]))
+    with Path(path).open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(PREDICTION_COLUMNS)
+        w.writerows(rows)
+
+
 def check_run_allowed(split: str, final: bool, judge_kind: str, confirmed: bool) -> str | None:
     """Return an error message if this run must not start, else None."""
     if split in ("test", "all") and not final:
@@ -234,6 +281,7 @@ def main(argv: list[str] | None = None) -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     stem = f"{judge.name}_{args.split}"
+    predictions_to_csv(examples, verdicts, args.out_dir / f"{stem}_predictions.csv")
     (args.out_dir / f"{stem}.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
     md = to_markdown(results, f"{judge.name} on {args.split} ({len(examples)} claims)")
     (args.out_dir / f"{stem}.md").write_text(md, encoding="utf-8")

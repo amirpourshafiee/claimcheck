@@ -129,3 +129,16 @@ def test_run_judge_survives_an_unparseable_reply_and_counts_it():
     assert results["judge_errors"] == ["bad"]
     assert results["views"]["end_to_end"]["slices"][0]["fn"] == 1
     assert "Judge errors" in to_markdown(results, "t")
+
+
+def test_predictions_csv_lists_wrong_rows_first(tmp_path):
+    import csv
+
+    from claimcheck.evaluate import predictions_to_csv
+
+    examples = [ex("ok", S), ex("wrong", C)]
+    path = tmp_path / "p.csv"
+    predictions_to_csv(examples, verdicts(ok=S, wrong=S), path)
+    rows = list(csv.DictReader(path.open(encoding="utf-8")))
+    assert [r["claim_id"] for r in rows] == ["wrong", "ok"]
+    assert rows[0]["correct"] == "False" and rows[0]["gold_flagged"] == "True"
