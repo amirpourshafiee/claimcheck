@@ -1,0 +1,73 @@
+claim_id,answer_id,claim_text,citation_id
+q01-c01,q01,The Antikythera mechanism is a geared bronze device.,S1
+q01-c02,q01,The Antikythera mechanism was recovered from a shipwreck off the Greek island of Antikythera.,S1
+q01-c03,q01,The Antikythera mechanism was recovered in 1901.,S1
+q01-c04,q01,The astrolabe projected the celestial sphere onto a flat plate using stereographic projection.,S2
+q01-c05,q01,The astrolabe has a rotating star map called the rete.,S2
+q01-c06,q01,Medieval Islamic and European astronomers used the astrolabe to tell time.,S2
+q02-c01,q02,The lead-acid battery was invented by French physicist Gaston Planté.,S1
+q02-c02,q02,The lead-acid battery was invented in 1859.,S1
+q02-c03,q02,The lead-acid battery is the oldest type of rechargeable battery.,S1
+q02-c04,q02,A lithium-ion cell moves lithium ions between a graphite anode and a metal oxide cathode during charge and discharge.,S2
+q02-c05,q02,Lithium cobalt oxide is an example of a metal oxide cathode in a lithium-ion cell.,S2
+q02-c06,q02,Lithium-ion cells have a nominal voltage of about 3.6 to 3.7 volts.,S2
+q03-c01,q03,Voyager 1 was launched by NASA.,S1
+q03-c02,q03,"Voyager 1 was launched on September 5, 1977.",S1
+q03-c03,q03,Voyager 1 flew past Jupiter in 1979.,S1
+q03-c04,q03,"Voyager 2 launched on August 20, 1977.",S2
+q03-c05,q03,Voyager 2 launched sixteen days before its twin Voyager 1.,S2
+q03-c06,q03,Voyager 2 is the only spacecraft to have visited Uranus.,S2
+q04-c01,q04,Tardigrades are microscopic animals.,S1
+q04-c02,q04,Tardigrades are typically about 0.5 millimeters long.,S1
+q04-c03,q04,Tardigrades have eight legs.,S1
+q04-c04,q04,Most extremophiles are microorganisms.,S2
+q04-c05,q04,Archaea are an example of extremophile microorganisms.,S2
+q04-c06,q04,Most extremophiles live permanently in extreme habitats like hydrothermal vents.,S2
+q05-c01,q05,The Rosetta Stone was found in 1799.,S1
+q05-c02,q05,The Rosetta Stone was found by French soldiers.,S1
+q05-c03,q05,The Rosetta Stone was found at Rashid in the Nile Delta.,S1
+q05-c04,q05,Linear B is a syllabic script.,S2
+q05-c05,q05,Linear B was used to write Mycenaean Greek.,S2
+q05-c06,q05,Arthur Evans found large numbers of Linear B tablets at Knossos on Crete.,S2
+q06-c01,q06,CRISPR sequences were first found in bacteria.,S1
+q06-c02,q06,"In bacteria, CRISPR sequences work as an adaptive immune system against viruses.",S1
+q06-c03,q06,"In CRISPR gene editing, a guide RNA directs the Cas9 enzyme to a matching DNA sequence.",S1
+q06-c04,q06,Kary Mullis invented the polymerase chain reaction in 1983.,S2
+q06-c05,q06,Each polymerase chain reaction (PCR) cycle includes a denaturation step at about 94 to 98 °C.,S2
+q06-c06,q06,Each polymerase chain reaction (PCR) cycle includes a primer annealing step.,S2
+q07-c01,q07,"The Tacoma Narrows Bridge collapsed on November 7, 1940.",S1
+q07-c02,q07,The Tacoma Narrows Bridge collapsed into Puget Sound.,S1
+q07-c03,q07,The Tacoma Narrows Bridge collapsed only four months after it opened.,S1
+q07-c04,q07,"London's Millennium Bridge opened on June 10, 2000.",S2
+q07-c05,q07,London's Millennium Bridge closed two days after it opened.,S2
+q07-c06,q07,London's Millennium Bridge closed because it swayed sideways under crowds.,S2
+q08-c01,q08,"John Bardeen, Walter Brattain, and William Shockley built the first working point-contact transistor.",S1
+q08-c02,q08,The first working point-contact transistor was built at Bell Labs.,S1
+q08-c03,q08,The first working point-contact transistor was built in 1947.,S1
+q08-c04,q08,A vacuum tube controls current by emitting electrons from a heated cathode through a vacuum to a plate.,S2
+q08-c05,q08,John Ambrose Fleming invented the vacuum tube diode in 1904.,S2
+q08-c06,q08,Lee de Forest added a control grid to the vacuum tube to create the triode in 1906.,S2
+q09-c01,q09,The Panama Canal is about 82 kilometers long.,S1
+q09-c02,q09,The Panama Canal connects the Atlantic and Pacific Oceans.,S1
+q09-c03,q09,The United States completed the Panama Canal in 1914.,S1
+q09-c04,q09,The Suez Canal opened in 1869.,S2
+q09-c05,q09,The Suez Canal links the Mediterranean Sea to the Red Sea.,S2
+q09-c06,q09,The Suez Canal is about 193 kilometers long.,S2
+q10-c01,q10,Bi Sheng invented movable type.,S1
+q10-c02,q10,Bi Sheng's movable type was made of baked clay.,S1
+q10-c03,q10,Bi Sheng invented movable type in China.,S1
+q10-c04,q10,Johannes Gutenberg introduced movable metal type printing.,S2
+q10-c05,q10,Johannes Gutenberg introduced movable metal type printing in Mainz.,S2
+q10-c06,q10,Johannes Gutenberg introduced movable metal type printing around 1440.,S2
+q11-c01,q11,The Enigma machine was invented by German engineer Arthur Scherbius.,S1
+q11-c02,q11,The Enigma machine was invented at the end of World War I.,S1
+q11-c03,q11,The Enigma machine encrypted letters with a set of rotating rotors.,S1
+q11-c04,q11,The Lorenz SZ40/42 enciphered teleprinter messages.,S2
+q11-c05,q11,The Lorenz SZ40/42 enciphered messages by adding a pseudorandom keystream.,S2
+q11-c06,q11,The Lorenz SZ40/42 keystream was generated by 12 wheels.,S2
+q12-c01,q12,"Apollo 13 launched on April 11, 1970.",S1
+q12-c02,q12,"Apollo 13 carried astronauts Jim Lovell, Jack Swigert, and Fred Haise.",S1
+q12-c03,q12,"About 56 hours into the flight, an oxygen tank in the Apollo 13 service module exploded.",S1
+q12-c04,q12,"Apollo 11 launched on July 16, 1969.",S2
+q12-c05,q12,"Apollo 11 carried Neil Armstrong, Buzz Aldrin, and Michael Collins.",S2
+q12-c06,q12,"Apollo 11's Lunar Module Eagle landed on July 20, 1969.",S2
