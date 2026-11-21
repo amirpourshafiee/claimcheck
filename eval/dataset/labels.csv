@@ -54,7 +54,7 @@ q09-c04,q09,dev,The Suez Canal opened in 1869.,S2,organic,,Supported,Opened in 1
 q09-c05,q09,dev,The Suez Canal links the Mediterranean Sea to the Red Sea.,S2,organic,,Supported,direct route between the North Atlantic and northern Indian oceans via the Mediterranean Sea and the Red Sea,
 q09-c06,q09,dev,The Suez Canal is about 193 kilometers long.,S2,organic,,Supported,the 193.3-kilometre  (120.1-mile) canal ,
 q10-c01,q10,dev,Bi Sheng invented movable type.,S1,organic,,Supported,by the inventor Bi Sheng ,
-q10-c02,q10,dev,Bi Sheng's movable type was made of baked clay.,S1,organic,,Supported,was made of porcelain materials ,
+q10-c02,q10,dev,Bi Sheng's movable type was made of baked clay.,S1,organic,,Contradicted,was made of porcelain materials,Relabeled SUPPORTED to CONTRADICTED on 2026-11-21 after seeing judge output on dev. Source says porcelain; equating it with baked clay needs outside knowledge.
 q10-c03,q10,dev,Bi Sheng invented movable type in China.,S1,organic,,Supported,in China during the Northern Song dynasty by the inventor Bi Sheng,
 q10-c04,q10,dev,Johannes Gutenberg introduced movable metal type printing.,S2,organic,,Supported,"invented the movable-type printing press around 1440,",
 q10-c05,q10,dev,Johannes Gutenberg introduced movable metal type printing in Mainz.,S2,organic,,Not_MENTIONED,,
