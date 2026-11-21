@@ -103,7 +103,8 @@ model wrote the answers.
 
 ## Consistency check
 
-At least 24 hours after you finish, copy 20 random organic rows into a new sheet WITHOUT their
-labels and label them again from scratch. The agreement between your two passes (Cohen's kappa,
-computed later) is the ceiling for any judge: no judge can sensibly agree with you more than you
+At least 24 hours after you finish, relabel 20 random organic rows from scratch with their labels
+hidden. `python -m claimcheck.consistency sample --out relabel_blind.csv` writes the sheet (seeded,
+no labels in it), and `python -m claimcheck.consistency compare --pass2 relabel_blind.csv` reports
+agreement and Cohen's kappa. The agreement between your two passes is the ceiling for any judge: no judge can sensibly agree with you more than you
 agree with yourself.
