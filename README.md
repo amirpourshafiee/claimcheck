@@ -17,6 +17,11 @@ A tool that checks every claim in an AI answer against its cited source and flag
 "Flagged" means any label other than `SUPPORTED`. Precision, recall, and F1 are reported for the
 flagged class.
 
+## Dataset
+
+The labeled test set is built by hand. Start with [eval/LABELING_GUIDE.md](eval/LABELING_GUIDE.md).
+Source excerpts are Wikipedia text under CC BY-SA 4.0 (see each file's header).
+
 ## Development
 
 ```bash

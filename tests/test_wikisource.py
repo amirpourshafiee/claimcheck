@@ -128,8 +128,6 @@ def test_with_retries_gives_up_after_max_tries():
 
 def test_load_topics_rejects_bad_split(tmp_path: Path):
     p = tmp_path / "t.json"
-    p.write_text(
-        json.dumps([{"answer_id": "q1", "split": "val", "sources": []}]), encoding="utf-8"
-    )
+    p.write_text(json.dumps([{"answer_id": "q1", "split": "val", "sources": []}]), encoding="utf-8")
     with pytest.raises(ValueError):
         ws.load_topics(p)
