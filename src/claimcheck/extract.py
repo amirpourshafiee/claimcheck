@@ -38,7 +38,7 @@ def build_user_prompt(answer_text: str) -> str:
     return f"Answer:\n{answer_text.strip()}"
 
 
-def _strip_code_fence(reply: str) -> str:
+def strip_code_fence(reply: str) -> str:
     m = re.fullmatch(r"\s*```(?:json)?\s*(.*?)\s*```\s*", reply, flags=re.DOTALL)
     return m.group(1) if m else reply.strip()
 
@@ -46,7 +46,7 @@ def _strip_code_fence(reply: str) -> str:
 def parse_claims(reply: str, answer_id: str) -> list[Claim]:
     """Validate a model reply and return Claims with ids like q01-c01."""
     try:
-        data = json.loads(_strip_code_fence(reply))
+        data = json.loads(strip_code_fence(reply))
     except json.JSONDecodeError as e:
         raise ExtractionError(f"reply is not valid JSON: {e}") from e
     if not isinstance(data, list) or not data:
