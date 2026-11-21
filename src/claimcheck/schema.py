@@ -86,6 +86,8 @@ class Report:
     answer_id: str
     claims: list[Claim] = field(default_factory=list)
     verdicts: list[Verdict] = field(default_factory=list)
+    # Claim ids with no citation. They are out of scope for v1 and reported as not evaluated.
+    uncited: list[str] = field(default_factory=list)
 
     def summary(self) -> dict[str, int]:
         """Count of verdicts per label, always including every label (zeros included)."""
@@ -101,6 +103,7 @@ class Report:
         return {
             "answer_id": self.answer_id,
             "summary": self.summary(),
+            "uncited": list(self.uncited),
             "claims": [asdict(c) for c in self.claims],
             "verdicts": [v.to_dict() for v in self.verdicts],
         }
