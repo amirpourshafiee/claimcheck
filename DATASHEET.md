@@ -1,7 +1,6 @@
 # Datasheet: claimcheck labeled claims (v1)
 
-Follows the "Datasheets for Datasets" questions, shortened. Last updated 2026-11-21.
-Items marked **TO FILL** depend on steps not done yet and are listed at the end.
+Follows the "Datasheets for Datasets" questions, shortened. Last updated 2026-11-23.
 
 ## Motivation
 
@@ -143,11 +142,19 @@ self-relabel to get it.
 
 - **Excerpts.** Wikipedia text, CC BY-SA 4.0. Attribution and revision links are in each file
   header. Any redistribution of the excerpts must stay under the same license.
-- **Claims, labels, notes.** Written for this project. Because the claims paraphrase the CC BY-SA
-  excerpts, treat the dataset as CC BY-SA 4.0 too. The code is MIT. This is the author's
-  reading, not legal advice.
-- **Generated answers.** Produced by a third-party chatbot. Its terms of use for outputs were not
-  checked. **TO FILL:** read them before publishing `eval/answers/answers_raw.md`.
+- **Claims, labels, notes.** The claims are split from the Grok-written answers below. Labels,
+  notes and evidence quotes were written for this project, and the quotes copy short passages of
+  the CC BY-SA excerpts, so treat the labeled dataset as CC BY-SA 4.0. The code is MIT. This is
+  the author's reading, not legal advice.
+- **Generated answers.** Written with Grok (xAI), 2026-11-20, attributed as the xAI Brand
+  Guidelines ask ("Written with Grok"). Terms checked 2026-11-23 (consumer Terms of Service,
+  Section 4, version labeled "Last Updated: October 27, 2026 (previous version)"): the user owns the
+  Output, the user must judge accuracy before sharing it, and no prohibition on publishing was
+  found. Two points are unresolved: the terms also say that using Output requires xAI's permission
+  and attribution (read by the author as being about brand use, but the wording is ambiguous), and
+  earlier versions barred using Output to build competing models (this dataset is for evaluation,
+  not training). The author is not a lawyer, and the page read may not be the current version.
+  The product used (app, grok.com, or Grok in X) was not recorded.
 
 ## Maintenance
 
@@ -159,4 +166,3 @@ Version 1, 2026-11-21. Label corrections are made by pull request and must be li
 - **Intra-annotator consistency (the annotator relabeling blind, at least 24 hours later):** not
   done. `python -m claimcheck.consistency sample` and `compare` support it.
 - **Generator model name:** the app did not show it. If it can be found later, add it.
-- Confirm the generated answers' terms of use (above).
