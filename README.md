@@ -2,8 +2,8 @@
 
 A tool that checks every claim in an AI answer against its cited source and flags unsupported ones.
 
-> Status: pipeline and evaluation harness are built. The final results on the held-out test split
-> are not run yet, so this README reports no scores. See [Results](#results).
+> Status: pipeline, labeled dataset and evaluation are done. See [Results](#results) for what the
+> numbers do and do not show.
 
 ## How it works
 
@@ -56,11 +56,29 @@ from claimcheck.report import to_markdown
 answer = "The device was found in 1901. [S1] It has 99 gears. [S2]"
 sources = {"S1": "The device was discovered in 1901 in a shipwreck."}
 
-extract = ScriptedClient([json.dumps([
-    {"text": "The device was found in 1901.", "citation": "S1"},
-    {"text": "The device has 99 gears.", "citation": "S2"}])])
-judge = LLMJudge(ScriptedClient([json.dumps({"label": "SUPPORTED",
-    "evidence_quote": "discovered in 1901", "rationale": "same year"})]))
+extract = ScriptedClient(
+    [
+        json.dumps(
+            [
+                {"text": "The device was found in 1901.", "citation": "S1"},
+                {"text": "The device has 99 gears.", "citation": "S2"},
+            ]
+        )
+    ]
+)
+judge = LLMJudge(
+    ScriptedClient(
+        [
+            json.dumps(
+                {
+                    "label": "SUPPORTED",
+                    "evidence_quote": "discovered in 1901",
+                    "rationale": "same year",
+                }
+            )
+        ]
+    )
+)
 print(to_markdown(run_pipeline("demo", answer, sources, extract, judge)))
 ```
 
@@ -91,16 +109,24 @@ wrong or unsupported by the cited excerpt, 5 of them outright contradictions.
 
 ## Results
 
-Not yet. The held-out test split (76 claims, 8 answers) has not been run. When it is, this table
-will hold precision, recall, and F1 for the flagged class, the 4-class confusion matrix, and Cohen's
-kappa against the hand labels, each with a 95% bootstrap interval, plus the annotator's own
-repeatability (kappa between two labeling passes). Organic and planted claims are reported
-separately because planted claims are much easier.
+Held-out test split (76 claims, 8 answers), run once with everything frozen. Full report with
+error analysis: [EVALUATION.md](EVALUATION.md).
 
-| Judge | Slice | Precision | Recall | F1 | kappa |
+| Judge | Slice | n | Precision | Recall | F1 for flagged (95% CI) |
 |---|---|---|---|---|---|
-| Claude Haiku 5.5 | organic (test) | pending | pending | pending | pending |
-| Word-overlap baseline | organic (test) | pending | pending | pending | pending |
+| Claude Haiku 5.5 | organic | 48 | 0.89 | 0.89 | **0.89** (0.67 to 1.00) |
+| Word-overlap baseline | organic | 48 | 0.70 | 0.78 | 0.74 (0.50 to 0.94) |
+| Claude Haiku 5.5 | all, judge only | 69 | 0.97 | 0.97 | 0.97 (0.92 to 1.00) |
+| Word-overlap baseline | all, judge only | 69 | 0.90 | 0.90 | 0.90 (0.81 to 0.97) |
+
+Read these carefully:
+- The organic row is the one that matters. It rests on **9 flagged claims**, so the interval is
+  wide. The paired F1 gain over the baseline is +0.15 (95% CI 0.00 to +0.31): suggestive, not
+  established.
+- Planted claims are easy (the baseline scores 0.98 on them), so the combined row is flattered.
+- All four judge errors are organic and look like borderline or wrong labels (EVALUATION.md). The
+  labels were not changed after seeing test output.
+- Cost of the test run: $0.020 for 69 calls.
 
 ## Limitations
 

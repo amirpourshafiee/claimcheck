@@ -1,0 +1,185 @@
+{
+  "judge_errors": [],
+  "views": {
+    "end_to_end": {
+      "slices": [
+        {
+          "slice": "all",
+          "n": 76,
+          "gold_flagged": 37,
+          "prevalence": 0.4868421052631579,
+          "precision": 0.918918918918919,
+          "recall": 0.918918918918919,
+          "f1": 0.918918918918919,
+          "f1_ci95": [
+            0.8450704225352113,
+            0.9772727272727273
+          ],
+          "kappa_4class": 0.726012201885746,
+          "tp": 34,
+          "fp": 3,
+          "fn": 3,
+          "tn": 36
+        },
+        {
+          "slice": "organic",
+          "n": 48,
+          "gold_flagged": 9,
+          "prevalence": 0.1875,
+          "precision": 0.7,
+          "recall": 0.7777777777777778,
+          "f1": 0.7368421052631577,
+          "f1_ci95": [
+            0.5,
+            0.9411764705882353
+          ],
+          "kappa_4class": 0.6220472440944883,
+          "tp": 7,
+          "fp": 3,
+          "fn": 2,
+          "tn": 36
+        },
+        {
+          "slice": "planted",
+          "n": 28,
+          "gold_flagged": 28,
+          "prevalence": 1.0,
+          "precision": 1.0,
+          "recall": 0.9642857142857143,
+          "f1": 0.9818181818181818,
+          "f1_ci95": [
+            0.9433962264150945,
+            1.0
+          ],
+          "kappa_4class": 0.5692307692307693,
+          "tp": 27,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        }
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 36,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 3,
+          "CITATION_MISSING": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 3,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 7,
+          "CITATION_MISSING": 0
+        },
+        "NOT_MENTIONED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 20,
+          "CITATION_MISSING": 0
+        },
+        "CITATION_MISSING": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 0,
+          "CITATION_MISSING": 7
+        }
+      }
+    },
+    "judge_only": {
+      "slices": [
+        {
+          "slice": "all",
+          "n": 69,
+          "gold_flagged": 30,
+          "prevalence": 0.43478260869565216,
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1": 0.9,
+          "f1_ci95": [
+            0.8076923076923077,
+            0.9722222222222222
+          ],
+          "kappa_4class": 0.6602272727272729,
+          "tp": 27,
+          "fp": 3,
+          "fn": 3,
+          "tn": 36
+        },
+        {
+          "slice": "organic",
+          "n": 48,
+          "gold_flagged": 9,
+          "prevalence": 0.1875,
+          "precision": 0.7,
+          "recall": 0.7777777777777778,
+          "f1": 0.7368421052631577,
+          "f1_ci95": [
+            0.5,
+            0.9411764705882353
+          ],
+          "kappa_4class": 0.6220472440944883,
+          "tp": 7,
+          "fp": 3,
+          "fn": 2,
+          "tn": 36
+        },
+        {
+          "slice": "planted",
+          "n": 21,
+          "gold_flagged": 21,
+          "prevalence": 1.0,
+          "precision": 1.0,
+          "recall": 0.9523809523809523,
+          "f1": 0.975609756097561,
+          "f1_ci95": [
+            0.923076923076923,
+            1.0
+          ],
+          "kappa_4class": 0.08695652173913042,
+          "tp": 20,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        }
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 36,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 3,
+          "CITATION_MISSING": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 3,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 7,
+          "CITATION_MISSING": 0
+        },
+        "NOT_MENTIONED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 20,
+          "CITATION_MISSING": 0
+        },
+        "CITATION_MISSING": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 0,
+          "CITATION_MISSING": 0
+        }
+      }
+    }
+  },
+  "matcher_check": {
+    "gold_citation_missing": 7,
+    "caught": 7,
+    "false_alarms": 0
+  },
+  "meta": {
+    "judge": "baseline-lexical",
+    "split": "test",
+    "date": "2026-11-23",
+    "n": 76,
+    "threshold": 0.7
+  }
+}
