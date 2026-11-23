@@ -93,8 +93,8 @@ Items marked **TO FILL** depend on steps not done yet and are listed at the end.
 
 1. **Small.** 113 claims, 54 flagged (13 of them organic). Confidence intervals are wide. The dev split has only 4
    answers, so no interval can be computed for it.
-2. **One annotator.** There is no second rater. The consistency check below is the only
-   reliability estimate, and it measures the same person's repeatability, not correctness.
+2. **One annotator.** The only reliability evidence is a check by two language-model raters
+   (see "Second-rater check"), which is not independent and covers 20 claims.
 3. **"Not mentioned" means "not in a 700-word excerpt".** A claim can be true and still be
    flagged because the excerpt is truncated. The judge sees the same excerpt, so the metric is
    fair for this task, but it is not a measure of truth.
@@ -114,6 +114,31 @@ Items marked **TO FILL** depend on steps not done yet and are listed at the end.
    excerpt, and a quote not found in it is discarded).
 8. **Ambiguous cases exist** (see the two examples above). They are left in, not removed.
 
+## Second-rater check (not the annotator's own repeatability)
+
+20 organic claims were drawn at random (seed 20261123, from the 52 organic claims not in an
+earlier, unused sample) and labeled from the excerpts alone by two other raters: Claude and the
+Grok bot, each in one pass (`eval/second_rater/`). Labels and prompts are in the repo.
+
+| Rater | Agreement with the labels as first written | kappa (4-class) |
+|---|---|---|
+| Claude | 19 of 20 | 0.81 |
+| Grok | 18 of 20 | 0.67 |
+
+Claude and Grok agreed with each other on 19 of 20. Both disagreed with the annotator on
+`q03-c03` (the excerpt gives no Jupiter flyby year, so CONTRADICTED was wrong), and the label
+was corrected. After that fix the agreement rates are 20 of 20 for Claude (kappa 1.00) and 19 of 20
+for Grok (kappa 0.83), but those numbers are circular and should not be quoted. The other
+disagreement, `q08-c04` (Grok: NOT_MENTIONED, others: SUPPORTED), is about "plate" versus
+"anode" and was left unchanged.
+
+Caveats: Claude had already seen many labels in the conversation, so it was not blind. Grok wrote
+the answers these claims come from, so it is not independent. Both are language models and may
+share biases with the LLM judge. This check found one real label error in 20 claims, which
+suggests a label error rate on the order of a few percent, with huge uncertainty. It is not a
+measure of the annotator's own repeatability, which has not been measured; do a blind
+self-relabel to get it.
+
 ## Distribution and license
 
 - **Excerpts.** Wikipedia text, CC BY-SA 4.0. Attribution and revision links are in each file
@@ -131,7 +156,7 @@ Version 1, 2026-11-21. Label corrections are made by pull request and must be li
 
 ## Still to fill in
 
-- **Intra-annotator consistency (Cohen's kappa, 20 organic claims relabeled blind at least 24
-  hours later):** TO FILL from `python -m claimcheck.consistency compare`.
+- **Intra-annotator consistency (the annotator relabeling blind, at least 24 hours later):** not
+  done. `python -m claimcheck.consistency sample` and `compare` support it.
 - **Generator model name:** the app did not show it. If it can be found later, add it.
 - Confirm the generated answers' terms of use (above).
