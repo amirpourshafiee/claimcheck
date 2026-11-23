@@ -1,0 +1,189 @@
+{
+  "judge_errors": [],
+  "views": {
+    "end_to_end": {
+      "slices": [
+        {
+          "slice": "all",
+          "n": 76,
+          "gold_flagged": 37,
+          "prevalence": 0.4868421052631579,
+          "precision": 0.972972972972973,
+          "recall": 0.972972972972973,
+          "f1": 0.972972972972973,
+          "f1_ci95": [
+            0.935064935064935,
+            1.0
+          ],
+          "kappa_4class": 0.9173014145810663,
+          "tp": 36,
+          "fp": 1,
+          "fn": 1,
+          "tn": 38
+        },
+        {
+          "slice": "organic",
+          "n": 48,
+          "gold_flagged": 9,
+          "prevalence": 0.1875,
+          "precision": 0.8888888888888888,
+          "recall": 0.8888888888888888,
+          "f1": 0.8888888888888888,
+          "f1_ci95": [
+            0.6666666666666666,
+            1.0
+          ],
+          "kappa_4class": 0.736625514403292,
+          "tp": 8,
+          "fp": 1,
+          "fn": 1,
+          "tn": 38
+        },
+        {
+          "slice": "planted",
+          "n": 28,
+          "gold_flagged": 28,
+          "prevalence": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "f1_ci95": [
+            1.0,
+            1.0
+          ],
+          "kappa_4class": 1.0,
+          "tp": 28,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        }
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 38,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 1,
+          "CITATION_MISSING": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 1,
+          "CONTRADICTED": 7,
+          "NOT_MENTIONED": 2,
+          "CITATION_MISSING": 0
+        },
+        "NOT_MENTIONED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 20,
+          "CITATION_MISSING": 0
+        },
+        "CITATION_MISSING": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 0,
+          "CITATION_MISSING": 7
+        }
+      }
+    },
+    "judge_only": {
+      "slices": [
+        {
+          "slice": "all",
+          "n": 69,
+          "gold_flagged": 30,
+          "prevalence": 0.43478260869565216,
+          "precision": 0.9666666666666667,
+          "recall": 0.9666666666666667,
+          "f1": 0.9666666666666667,
+          "f1_ci95": [
+            0.9180327868852459,
+            1.0
+          ],
+          "kappa_4class": 0.8981549815498154,
+          "tp": 29,
+          "fp": 1,
+          "fn": 1,
+          "tn": 38
+        },
+        {
+          "slice": "organic",
+          "n": 48,
+          "gold_flagged": 9,
+          "prevalence": 0.1875,
+          "precision": 0.8888888888888888,
+          "recall": 0.8888888888888888,
+          "f1": 0.8888888888888888,
+          "f1_ci95": [
+            0.6666666666666666,
+            1.0
+          ],
+          "kappa_4class": 0.736625514403292,
+          "tp": 8,
+          "fp": 1,
+          "fn": 1,
+          "tn": 38
+        },
+        {
+          "slice": "planted",
+          "n": 21,
+          "gold_flagged": 21,
+          "prevalence": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "f1_ci95": [
+            1.0,
+            1.0
+          ],
+          "kappa_4class": 1.0,
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        }
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 38,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 1,
+          "CITATION_MISSING": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 1,
+          "CONTRADICTED": 7,
+          "NOT_MENTIONED": 2,
+          "CITATION_MISSING": 0
+        },
+        "NOT_MENTIONED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 20,
+          "CITATION_MISSING": 0
+        },
+        "CITATION_MISSING": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "NOT_MENTIONED": 0,
+          "CITATION_MISSING": 0
+        }
+      }
+    }
+  },
+  "matcher_check": {
+    "gold_citation_missing": 7,
+    "caught": 7,
+    "false_alarms": 0
+  },
+  "meta": {
+    "judge": "llm-judge-claude-haiku-5-5-v1",
+    "split": "test",
+    "date": "2026-11-23",
+    "n": 76,
+    "model": "claude-haiku-5-5",
+    "real_calls": 69,
+    "cache_hits": 0,
+    "measured_usd": 0.020067,
+    "thinking_tokens": 5441
+  }
+}

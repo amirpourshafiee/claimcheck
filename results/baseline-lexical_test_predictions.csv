@@ -1,0 +1,77 @@
+claim_id,answer_id,split,origin,planted_type,gold,pred,gold_flagged,pred_flagged,correct,evidence_quote,rationale
+q01-c07,q01,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.50 (threshold 0.7)
+q02-c04,q02,test,organic,,CONTRADICTED,SUPPORTED,True,False,False,,word overlap 0.71 (threshold 0.7)
+q02-c07,q02,test,planted,contradiction,CONTRADICTED,SUPPORTED,True,False,False,,word overlap 1.00 (threshold 0.7)
+q03-c07,q03,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.67 (threshold 0.7)
+q04-c01,q04,test,organic,,SUPPORTED,NOT_MENTIONED,False,True,False,,word overlap 0.67 (threshold 0.7)
+q04-c02,q04,test,organic,,SUPPORTED,NOT_MENTIONED,False,True,False,,word overlap 0.60 (threshold 0.7)
+q04-c07,q04,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.83 (threshold 0.7); numbers not in source: ['300']
+q05-c07,q05,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.60 (threshold 0.7)
+q06-c03,q06,test,organic,,CONTRADICTED,SUPPORTED,True,False,False,,word overlap 0.82 (threshold 0.7)
+q11-c06,q11,test,organic,,SUPPORTED,NOT_MENTIONED,False,True,False,,word overlap 0.71 (threshold 0.7); numbers not in source: ['12']
+q11-c07,q11,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.89 (threshold 0.7); numbers not in source: ['28']
+q12-c03,q12,test,organic,,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.64 (threshold 0.7); numbers not in source: ['56']
+q12-c07,q12,test,planted,contradiction,CONTRADICTED,NOT_MENTIONED,True,True,False,,word overlap 0.91 (threshold 0.7); numbers not in source: ['1962']
+q01-c01,q01,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.80 (threshold 0.7)
+q01-c02,q01,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q01-c03,q01,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q01-c04,q01,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.30 (threshold 0.7)
+q01-c05,q01,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.33 (threshold 0.7)
+q01-c06,q01,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.88 (threshold 0.7)
+q01-c08,q01,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.33 (threshold 0.7)
+q01-c09,q01,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.20 (threshold 0.7)
+q01-c10,q01,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q02-c01,q02,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q02-c02,q02,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q02-c03,q02,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.83 (threshold 0.7)
+q02-c05,q02,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.88 (threshold 0.7)
+q02-c06,q02,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.71 (threshold 0.7)
+q02-c08,q02,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.50 (threshold 0.7)
+q02-c09,q02,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.29 (threshold 0.7)
+q02-c10,q02,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q03-c01,q03,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q03-c02,q03,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q03-c03,q03,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.40 (threshold 0.7); numbers not in source: ['1979']
+q03-c04,q03,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q03-c05,q03,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.83 (threshold 0.7)
+q03-c06,q03,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q03-c08,q03,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.40 (threshold 0.7); numbers not in source: ['865']
+q03-c09,q03,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.60 (threshold 0.7)
+q03-c10,q03,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q04-c03,q04,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q04-c04,q04,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q04-c05,q04,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q04-c06,q04,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.67 (threshold 0.7)
+q04-c08,q04,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.08 (threshold 0.7)
+q04-c09,q04,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.00 (threshold 0.7)
+q04-c10,q04,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q05-c01,q05,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q05-c02,q05,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.80 (threshold 0.7)
+q05-c03,q05,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q05-c04,q05,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q05-c05,q05,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.80 (threshold 0.7)
+q05-c06,q05,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.56 (threshold 0.7)
+q05-c08,q05,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.50 (threshold 0.7)
+q05-c09,q05,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.00 (threshold 0.7); numbers not in source: ['200']
+q05-c10,q05,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q06-c01,q06,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q06-c02,q06,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.78 (threshold 0.7)
+q06-c04,q06,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q06-c05,q06,test,organic,,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,"word overlap 0.67 (threshold 0.7); numbers not in source: ['94', '98']"
+q06-c06,q06,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.70 (threshold 0.7)
+q11-c01,q11,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q11-c02,q11,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q11-c03,q11,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.86 (threshold 0.7)
+q11-c04,q11,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q11-c05,q11,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.88 (threshold 0.7)
+q11-c08,q11,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.33 (threshold 0.7)
+q11-c09,q11,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.40 (threshold 0.7)
+q11-c10,q11,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided
+q12-c01,q12,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q12-c02,q12,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.90 (threshold 0.7)
+q12-c04,q12,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q12-c05,q12,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 0.89 (threshold 0.7)
+q12-c06,q12,test,organic,,SUPPORTED,SUPPORTED,False,False,True,,word overlap 1.00 (threshold 0.7)
+q12-c08,q12,test,planted,unsupported_addition,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.25 (threshold 0.7)
+q12-c09,q12,test,planted,wrong_source,NOT_MENTIONED,NOT_MENTIONED,True,True,True,,word overlap 0.12 (threshold 0.7); numbers not in source: ['600']
+q12-c10,q12,test,planted,fake_citation,CITATION_MISSING,CITATION_MISSING,True,True,True,,cited source 'S3' was not provided

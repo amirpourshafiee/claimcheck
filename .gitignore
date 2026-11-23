@@ -13,3 +13,6 @@ dist/
 # LLM response cache: reproducible from the code, may contain API output
 .claimcheck_cache/
 .DS_Store
+
+# Dev-split outputs are working files; only the frozen test results are committed.
+results/*_dev*
