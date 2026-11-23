@@ -13,7 +13,7 @@ q02-c05,q02,test,Lithium cobalt oxide is an example of a metal oxide cathode in 
 q02-c06,q02,test,Lithium-ion cells have a nominal voltage of about 3.6 to 3.7 volts.,S2,organic,,Supported,"typically have a nominal voltage of 3.6 or 3.7 V,",
 q03-c01,q03,test,Voyager 1 was launched by NASA.,S1,organic,,Supported,Voyager 1 is a space probe launched by NASA ,
 q03-c02,q03,test,"Voyager 1 was launched on September 5, 1977.",S1,organic,,Supported,"Voyager 1 is a space probe launched by NASA on September 5, 1977",
-q03-c03,q03,test,Voyager 1 flew past Jupiter in 1979.,S1,organic,,Contradicted,"The probe made flybys of Jupiter, Saturn, and Saturn's largest moon, Titan,",No mention of the date 1979
+q03-c03,q03,test,Voyager 1 flew past Jupiter in 1979.,S1,organic,,NOT_MENTIONED,,"No mention of the date 1979. Relabeled CONTRADICTED to NOT_MENTIONED on 2026-11-23: a second-rater check (Claude) disagreed, and the excerpt gives no Jupiter flyby year, so nothing contradicts the claim. No test output had been seen."
 q03-c04,q03,test,"Voyager 2 launched on August 20, 1977.",S2,organic,,Supported,"Voyager 2 is a space probe launched by NASA on August 20, 1977",
 q03-c05,q03,test,Voyager 2 launched sixteen days before its twin Voyager 1.,S2,organic,,Supported,"Launched 16 days before its twin Voyager 1,",
 q03-c06,q03,test,Voyager 2 is the only spacecraft to have visited Uranus.,S2,organic,,Supported,"the only spacecraft to have visited either of the ice giant planets,",

@@ -87,7 +87,7 @@ before trusting any number, and [eval/LABELING_GUIDE.md](eval/LABELING_GUIDE.md)
 Excerpts are Wikipedia text under CC BY-SA 4.0 (see each file's header).
 
 A finding that needs no judge: the answer-writing chatbot got **13 of 72 organic claims (18%)**
-wrong or unsupported by the cited excerpt, 6 of them outright contradictions.
+wrong or unsupported by the cited excerpt, 5 of them outright contradictions.
 
 ## Results
 
