@@ -104,6 +104,9 @@ passed, so it can only be used once the prompt and settings are frozen. Each run
 before trusting any number, and [eval/LABELING_GUIDE.md](eval/LABELING_GUIDE.md) for the rules.
 Excerpts are Wikipedia text under CC BY-SA 4.0 (see each file's header).
 
+The answers in `eval/answers/` were written with Grok (xAI) and are AI-generated; see
+[eval/answers/README.md](eval/answers/README.md) and the datasheet for the terms I checked.
+
 A finding that needs no judge: the answer-writing chatbot got **13 of 72 organic claims (18%)**
 wrong or unsupported by the cited excerpt, 5 of them outright contradictions.
 
