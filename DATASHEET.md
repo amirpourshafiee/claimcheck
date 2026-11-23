@@ -26,13 +26,13 @@ Items marked **TO FILL** depend on steps not done yet and are listed at the end.
 | Label | Total | dev | test |
 |---|---|---|---|
 | SUPPORTED | 59 | 20 | 39 |
-| NOT_MENTIONED | 27 | 8 | 19 |
-| CONTRADICTED | 17 | 6 | 11 |
+| NOT_MENTIONED | 28 | 8 | 20 |
+| CONTRADICTED | 16 | 6 | 10 |
 | CITATION_MISSING | 10 | 3 | 7 |
 | **Total** | **113** | **37** | **76** |
 
 - **Organic vs planted.** Organic: 72 claims (dev 24, test 48), of which 13 (18%) are flagged by
-  the hand labels: 7 NOT_MENTIONED and 6 CONTRADICTED. That is the real finding about the
+  the hand labels: 8 NOT_MENTIONED and 5 CONTRADICTED. That is the real finding about the
   answer-writing chatbot on these excerpts. Planted: 41 claims (dev 13, test 28), 100% flagged
   by construction.
 - **Planted types** (written by the annotator after all organic rows were labeled):
@@ -74,6 +74,10 @@ Items marked **TO FILL** depend on steps not done yet and are listed at the end.
   - `q10-c02` SUPPORTED to CONTRADICTED on 2026-11-21, **after seeing judge output on dev**. The
     source says "porcelain materials" and the claim says "baked clay"; equating them needs outside
     knowledge. The row's `notes` cell records this.
+  - `q03-c03` CONTRADICTED to NOT_MENTIONED on 2026-11-23, found by a second-rater check (Claude
+    labeled the same 20 claims; one disagreement). The excerpt never states the Jupiter flyby
+    year, so nothing in it contradicts the claim. This was a test-split label, fixed **before any
+    test output was seen**.
   - `q07-c05` was **not** changed although the judge disagrees with the label. The excerpt says
     both "closed later that day" and "closure ... only two days after opening", so the label is a
     judgment call.
